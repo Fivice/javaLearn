@@ -7,6 +7,7 @@ import java.util.concurrent.CompletableFuture;
  * 异步编程
  */
 public class CompletableFutureDemo {
+
     public static void main(String[] args) throws InterruptedException {
         //任务一 订购航班
         CompletableFuture<String> orderAirplane = CompletableFuture.supplyAsync(()->{
