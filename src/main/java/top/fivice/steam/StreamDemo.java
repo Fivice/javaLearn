@@ -9,16 +9,19 @@ public class StreamDemo {
     public static void main(String[] args) {
 
         Stream<LocalDate> localDate = Stream.generate(new LocalDateSupplier());
-        localDate.limit(10)
+        /*localDate.limit(10)
                 .filter(ld->ld.getDayOfWeek() == DayOfWeek.SATURDAY||ld.getDayOfWeek()== DayOfWeek.SUNDAY)
-                .forEach(System.out::println);
+                .forEach(System.out::println);*/
 
         Stream<Integer> nature = Stream.generate(new NatureSupplier());
-        nature.map(integer -> integer*integer).limit(10).forEach(System.out::println);
+        //nature.map(integer -> integer*integer).limit(10).forEach(System.out::println);
+
+        int sum = nature.limit(3).reduce(1,(acc,n)->acc*n);
+        System.out.println(sum);
     }
 }
 class NatureSupplier implements Supplier<Integer>{
-    int n=0;
+    int n=1;
     @Override
     public Integer get() {
         return n++;
