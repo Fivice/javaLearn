@@ -15,12 +15,12 @@ public class ReentrantLockDemo {
     public static void main(String[] args) throws InterruptedException {
         TaskQueue taskQueue = new TaskQueue();
         Thread t1 = new Thread(()->{
-            for (var i=0;i<10;i++){
+            for (int i=0;i<10;i++){
                 taskQueue.addTask("t1-"+i);
             }
         });
         Thread t2 = new Thread(()->{
-            for (var i=0;i<10;i++){
+            for (int i=0;i<10;i++){
                 taskQueue.getTask();
             }
         });

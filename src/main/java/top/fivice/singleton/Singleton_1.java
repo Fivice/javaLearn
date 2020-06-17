@@ -24,14 +24,11 @@ public class Singleton_1 {
 }
 class TestSingleton_1 {
     public static void main(String[] args) {
-
         //验证懒汉模式不安全
         for (int i = 0; i < 10; i++) {
             new Thread(()->{
                 Singleton_1 singleton_1 = Singleton_1.getSingleton();
             }).start();
         }
-
-        System.out.println("main end");
     }
 }
