@@ -1,4 +1,4 @@
-package top.fivice.singleton;
+package top.fivice.design.patterns.creational.singleton;
 
 /**
  * 双检锁

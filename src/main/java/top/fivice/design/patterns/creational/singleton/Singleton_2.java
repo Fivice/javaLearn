@@ -1,4 +1,4 @@
-package top.fivice.singleton;
+package top.fivice.design.patterns.creational.singleton;
 
 /**
  * 懒汉模式（加锁）

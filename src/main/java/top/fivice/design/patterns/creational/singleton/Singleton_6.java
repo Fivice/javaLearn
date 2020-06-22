@@ -1,4 +1,4 @@
-package top.fivice.singleton;
+package top.fivice.design.patterns.creational.singleton;
 
 public enum Singleton_6 {
     INSTANCE(1,"wubin");
